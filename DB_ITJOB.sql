@@ -63,11 +63,15 @@ create table profiles (
     type_work nvarchar(50)
 );
 
+drop table posts_profiles;
 create table posts_profiles(
 	id_post int,
     id_profile int,
     time nvarchar(50),
-    primary key (id_post, id_profile)
+    primary key (id_post, id_profile),
+    FOREIGN KEY (id_profile) REFERENCES profiles(id),
+    FOREIGN KEY (id_post) REFERENCES posts(id)
+    
 );
 alter table companies add column password varchar(50);
 
