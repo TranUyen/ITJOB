@@ -1,0 +1,51 @@
+/* input */
+
+.form-login {
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+    margin-top: 30px;
+} 
+
+input[type = "email"], input[type = "password"], input[type = "text"]{
+    display: inline-block;
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 1px solid #26baee;
+    padding: 5px;
+    margin-top: 20px;
+    
+}
+input[type = "date"]{
+	display: inline-block;
+	width: 60%;
+    border-radius: 0.25rem;
+    border: 1px solid #26baee;
+    padding: 5px;
+    margin-top: 20px;
+    
+}
+.select{
+	display: inline-block;
+	width: 39%;
+    border-radius: 0.25rem;
+    border: 1px solid #26baee;
+    padding: 7px;
+    padding-bottom: 8px;
+    margin-top: 20px;
+    
+}
+
+.login {
+    text-align: center;
+
+}
+
+@media (max-width: 768px){
+    .form-login {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+    } 
+}
