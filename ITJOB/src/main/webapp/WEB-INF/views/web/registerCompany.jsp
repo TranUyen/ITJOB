@@ -32,28 +32,77 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
     <%@include file="/common/web/header.jsp" %>
-    <div class="container-fluid ">
-	            <div class="col-sm-12 login">
-	                <form class="form-login">
-	                    <h2><strong>Đăng ký công ty</strong></h2>
-	                    <input name="name" type="text" required placeholder="Tên công ty"  >
-	                    <input name="email" type="email" required placeholder="Email"  > 
-	                    <input name="password" type="password" required placeholder="Password" >
-	                    <input name="address" type="text" required placeholder="Địa chỉ">
-	                    <input name="phone" type="text" required placeholder="Số điện thoại" style="margin-bottom: 20px;">
-	                    <button type="button" class="btn btn-primary btn-block">Đăng ký</button>
-	                    <div class="row">
-	                      <div class="col-md-6 col-md-push-1" >
-	                        <a href="#">Quên mật khẩu?</a>
-	                      </div>
-	                      <div class="col-md-6 float: right;">
-	                        <span>Đã có tài khoản?</span><a class="next" href="<c:url value = "/dang-nhap"/>">Đăng nhập</a>
-	                      </div>
-	                   </div>
-	                </form>
-	            </div>
-
-        	</div>
+    <div class="container" style="height: auto;">
+    		  <div class="text-center" style="margin-top: 10px;">
+    		  	 <h1>Đăng kí công ty</h1>
+    		  </div>
+	      	  <form action="#" class="needs-validation" method="post" novalidate>
+	      	   		<div class="form-group">
+			           <label for="inputComany">Company</label>
+			           <input type="text" class="form-control" id="inputComany" placeholder="Company Name" required name="name">
+			           <div class="invalid-feedback">Please enter your company name.</div>
+			       </div>
+			       <div class="form-group">
+			           <label for="inputEmail">Email</label>
+			           <input type="email" class="form-control" id="inputEmail" placeholder="Email" required name="email">
+			           <div class="invalid-feedback">Please enter a valid email address.</div>
+			       </div>
+			        <div class="form-group">
+			            <label for="inputPassword">Password</label>
+			            <input type="password" class="form-control" id="inputPassword" placeholder="Password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" 
+			            required name="password">
+			            <div class="invalid-feedback">
+			            	<p>At least one upper case. At least one lower case. At least one digit. Minimum eight characters</p>
+			            </div>
+			        </div>
+			         <div class="form-group">
+					    <label for="exampleFormControlSelect1">Address</label>
+					    <select class="form-control" id="exampleFormControlSelect1" name="address">
+					      <option value="Hà Nội">Hà Nội</option>
+					      <option value="Đà Nẵng">Đà Nẵng</option>		     
+					      <option value="TP HCM">TP HCM</option>
+					    </select>
+  					</div>
+			        <div class="form-group">
+			           <label for="inputPhone">Phone</label>
+			           <input type="text" class="form-control" id="inputEmail" placeholder="Phone Number" pattern="^[0-9]{10,11}$" required name="phone">
+			           <div class="invalid-feedback">Invalid phone number.</div>
+			       	</div>
+			       
+	        		<div style="margin-top: 20px;">
+	        			<button type="submit" class="btn btn-block btn-primary">Register</button>
+	        		</div>
+	    	</form>
+	      </div>
+	        
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src='<c:url value="/template/web/js/bootstrap.min.js"/>'></script>
+	<script src='<c:url value="/template/web/js/jquery-3.3.1.min.js"/>'></script>
+	<script>
+		// Self-executing function
+		(function() {
+			'use strict';
+			window.addEventListener('load',
+					function() {
+						// Fetch all the forms we want to apply custom Bootstrap validation styles to
+						var forms = document
+								.getElementsByClassName('needs-validation');
+						// Loop over them and prevent submission
+						var validation = Array.prototype.filter.call(forms,
+								function(form) {
+									form.addEventListener('submit', function(
+											event) {
+										if (form.checkValidity() === false) {
+											event.preventDefault();
+											event.stopPropagation();
+										}
+										form.classList.add('was-validated');
+									}, false);
+								});
+					}, false);
+		})();
+	</script>
         
 
 </body>

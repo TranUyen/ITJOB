@@ -1,57 +1,101 @@
-<%@ include file="/common/taglib.jsp" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/common/taglib.jsp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ITjob</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/bootstrap.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/style.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/bootstrap-datepicker.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/aos.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/animate.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/custom.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/fl-bigmug-line.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/jquery-ui.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/magnific-popup.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/owl.carousel.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/owl.theme.default.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/fonts/icomoon/style.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/fonts/flaticon/font/flaticon.css"/>'/>
-	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+<title>ITjob</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/bootstrap.min.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/style.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/bootstrap-datepicker.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/aos.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/animate.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/custom.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/fl-bigmug-line.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/jquery-ui.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/magnific-popup.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/owl.carousel.min.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/css/owl.theme.default.min.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/fonts/icomoon/style.css"/>' />
+<link rel="stylesheet" type="text/css" media="all"
+	href='<c:url value="/template/web/fonts/flaticon/font/flaticon.css"/>' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
 </head>
 <body>
 	<div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close mt-3">
+				<span class="icon-close2 js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+	<!-- .site-mobile-menu -->
+	<%@include file="/common/web/header.jsp"%>
+	<div class="container">
+	 <h1 class="text-center">Đăng nhập</h1>
+	 <form action="#" class="needs-validation" method="post" novalidate>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required name="email">
+            <div class="invalid-feedback">Please enter a valid email address.</div>
         </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-    <%@include file="/common/web/header.jsp" %>
-    <div class="container-fluid ">
-	            <div class="col-sm-12 login">
-	                <form class="form-login">
-	                    <h2><strong>Đăng nhập</strong></h2>
-	                    <input name="email" type="email" required="" placeholder="Email"  > 
-	                    <input name="password" type="password" required="" placeholder="Password" style="margin-bottom: 20px;">
-	                    <button type="button" class="btn btn-primary btn-block">Đăng nhập</button>
-	                    <div class="row">
-	                      <div class="col-md-6 col-md-push-1" >
-	                        <a href="#">Quên mật khẩu?</a>
-	                      </div>
-	                      <div class="col-md-6 float: right;">
-	                        <span>Chưa có tài khoản?</span><a class="next" href="<c:url value = "/dang-ky-cong-ty"/>">Đăng Ký</a>
-	                      </div>
-	                   </div>
-	                </form>
-	            </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required name="password">
+            <div class="invalid-feedback">Please enter your password to continue.</div>
+        </div>
+        <div class="form-group">
+            <label class="form-check-label"><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+	</div>
 
-        	</div>
-        
-
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src='<c:url value="/template/web/js/bootstrap.min.js"/>'></script>
+	<script src='<c:url value="/template/web/js/jquery-3.3.1.min.js"/>'></script>
+	<script>
+		// Self-executing function
+		(function() {
+			'use strict';
+			window.addEventListener('load',
+					function() {
+						// Fetch all the forms we want to apply custom Bootstrap validation styles to
+						var forms = document
+								.getElementsByClassName('needs-validation');
+						// Loop over them and prevent submission
+						var validation = Array.prototype.filter.call(forms,
+								function(form) {
+									form.addEventListener('submit', function(
+											event) {
+										if (form.checkValidity() === false) {
+											event.preventDefault();
+											event.stopPropagation();
+										}
+										form.classList.add('was-validated');
+									}, false);
+								});
+					}, false);
+		})();
+	</script>
 </body>
 </html>
