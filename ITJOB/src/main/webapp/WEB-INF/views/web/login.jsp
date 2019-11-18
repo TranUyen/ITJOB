@@ -3,42 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ITjob</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/bootstrap.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/style.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/bootstrap-datepicker.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/aos.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/animate.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/custom.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/fl-bigmug-line.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/jquery-ui.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/magnific-popup.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/owl.carousel.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/owl.theme.default.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/fonts/icomoon/style.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/fonts/flaticon/font/flaticon.css"/>'/>
 	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
 </head>
 <body>
-	<div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-    <%@include file="/common/web/header.jsp" %>
+	
     <div class="container-fluid ">
 	            <div class="col-sm-12 login">
-	                <form class="form-login">
+	                <form class="form-login" action="<c:url value="/dang-nhap"/>" method="post" >
 	                    <h2><strong>Đăng nhập</strong></h2>
+	                    <c:if test="${not empty errLogin}">
+                    	   <div class="thongbao">${errLogin} </div> 
+                    	</c:if>
+	                    
+	                    <select class="select_login" name="role">
+								<option value="1">Ứng Viên</option>
+								<option value="2">Công ty</option>
+						</select>
 	                    <input name="email" type="email" required="" placeholder="Email"  > 
 	                    <input name="password" type="password" required="" placeholder="Password" style="margin-bottom: 20px;">
-	                    <button type="button" class="btn btn-primary btn-block">Đăng nhập</button>
+	                    <input type="submit" class="btn btn-primary btn-block" value="Dang nhap">
 	                    <div class="row">
 	                      <div class="col-md-6 col-md-push-1" >
 	                        <a href="#">Quên mật khẩu?</a>

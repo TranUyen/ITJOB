@@ -27,15 +27,15 @@ public class PostEntity {
 	private String district;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id_companies")
 	private CompanyEntity companyEntity;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id_requirement")
 	private RequirementEntity requirementEntity;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id_contact")
 	private ContactEntity contactEntity;
 	
 	public String getId() {

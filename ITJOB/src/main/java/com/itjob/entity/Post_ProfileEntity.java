@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,12 +19,14 @@ public class Post_ProfileEntity {
 	private String time;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id_post")
 	private PostEntity postEntity;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id_profile")
 	private ProfileEntity profileEntity;
+	
+	
 	
 	public int getId() {
 		return id;

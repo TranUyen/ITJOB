@@ -1,5 +1,8 @@
 package com.itjob.dao;
 
-public class CompanyDAO {
+import com.itjob.entity.CompanyEntity;
 
+public interface CompanyDAO {
+	
+	public CompanyEntity checkLoginCompany(String email, String password);
 }

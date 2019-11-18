@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.mapping.Set;
@@ -14,8 +15,7 @@ public class ProfileEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
-	private String birthday;
+	private int id;
 	private String degree;
 	private String experience_years;
 	private String salary;
@@ -23,20 +23,15 @@ public class ProfileEntity {
 	private String project;
 	private String type_work;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 	
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
-	public String getBirthday() {
-		return birthday;
-	}
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
+	
 	public String getDegree() {
 		return degree;
 	}
@@ -73,7 +68,6 @@ public class ProfileEntity {
 	public void setType_work(String type_work) {
 		this.type_work = type_work;
 	}
-	
 	
 	
 	

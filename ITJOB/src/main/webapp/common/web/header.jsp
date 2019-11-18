@@ -1,15 +1,6 @@
 <%@include file="/common/taglib.jsp" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
     
     <header class="site-navbar py-1" role="banner">
 
@@ -38,14 +29,45 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                 <c:if test="${empty candidate && empty company} ">
                 <li><a href="<c:url value="/dang-nhap"/>">Đăng nhập</a></li>
-                <li class="has-children">
-                  <a href=""><span>Đăng ký </span> </a>
-                  <ul class="dropdown">
-                    <li><a href="<c:url value="/dang-ky-cong-ty"/>">Công Ty</a></li>
-                    <li><a href="<c:url value="/dang-ky-ung-vien"/>">Ứng Viên</a></li>
-                  </ul>
-                </li>
+	                <li class="has-children">
+	                  <a href=""><span>Đăng ký </span> </a>
+	                  <ul class="dropdown">
+	                    <li><a href="<c:url value="/dang-ky-cong-ty"/>">Công Ty</a></li>
+	                    <li><a href="<c:url value="/dang-ky-ung-vien"/>">Ứng Viên</a></li>
+	                  </ul>
+	                </li>
+	                
+	              </c:if>
+                <c:if test="${not empty candidate}">
+                	
+	                
+	                <li class="has-children">
+	                  <a href=""><span>${candidate.getName() } </span> </a>
+	                  <ul class="dropdown">
+	                    <li><a href="<c:url value="/dang-ky-cong-ty"/>">Hồ Sơ</a></li>
+	                    <li><a href="<c:url value="/dang-ky-ung-vien"/>">Đổi mật khẩu</a></li>
+	                    <li><a href="<c:url value="/dang-ky-ung-vien"/>">Đăng xuất</a></li>
+	                  </ul>
+	                </li>
+	                <img style="height: 27px; padding-bottom: 5px" class="btnLogin" src="/ITJOB/template/web/images/avatar.png">
+	                
+                </c:if>
+                <c:if test="${not empty company}">
+                	
+	                
+	                <li class="has-children">
+	                  <a href=""><span>${company.getName() } </span> </a>
+	                  <ul class="dropdown">
+	                    <li><a href="<c:url value="/dang-ky-cong-ty"/>">Hồ Sơ</a></li>
+	                    <li><a href="<c:url value="/dang-ky-ung-vien"/>">Đổi mật khẩu</a></li>
+	                    <li><a href="<c:url value="/dang-ky-ung-vien"/>">Đăng xuất</a></li>
+	                  </ul>
+	                </li>
+	                <img style="height: 27px; padding-bottom: 5px" class="btnLogin" src="/ITJOB/template/web/images/avatar.png">
+	                
+                </c:if>
               </ul>
             </nav>
           </div>

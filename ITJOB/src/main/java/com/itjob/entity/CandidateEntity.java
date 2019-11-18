@@ -7,9 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerators;
 
 @Entity
 @Table(name = "candidates")
@@ -24,7 +24,7 @@ public class CandidateEntity {
 	private int sex;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id_profiles")
 	private ProfileEntity profile;
 
 	public String getName() {
@@ -82,10 +82,6 @@ public class CandidateEntity {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
-	
-	
 	
 	
 }

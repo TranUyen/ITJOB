@@ -3,38 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ITjob</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/bootstrap.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/style.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/bootstrap-datepicker.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/aos.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/animate.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/custom.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/fl-bigmug-line.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/jquery-ui.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/magnific-popup.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/owl.carousel.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/owl.theme.default.min.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/fonts/icomoon/style.css"/>'/>
-	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/fonts/flaticon/font/flaticon.css"/>'/>
 	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
 </head>
 <body>
-	<div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-    <%@include file="/common/web/header.jsp" %>
+	
     <div class="container-fluid ">
 	            <div class="col-sm-12 login">
-	                <form class="form-login">
+	                <form class="form-login" >
 	                    <h2><strong>Đăng ký công ty</strong></h2>
 	                    <input name="name" type="text" required placeholder="Tên công ty"  >
 	                    <input name="email" type="email" required placeholder="Email"  > 

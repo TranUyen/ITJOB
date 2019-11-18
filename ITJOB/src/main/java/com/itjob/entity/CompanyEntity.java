@@ -16,6 +16,15 @@ public class CompanyEntity {
 	private String address;
 	private String phone;
 	private String email;
+	private String password;
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	
 	public int getId() {
 		return id;
