@@ -8,6 +8,19 @@ public class CompanyDTO {
 	private String phone;
 	private String email;
 	private String password;
+	
+	public CompanyDTO(int id, String name, String address, String phone, String email, String password) {
+		this.address = address;
+		this.email = email;
+		this.id = id;
+		this.name = name;
+		this.password = password;
+	}
+	
+	public CompanyDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int getId() {
 		return id;
 	}

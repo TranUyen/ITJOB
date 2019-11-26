@@ -5,6 +5,16 @@ public class ContactDTO {
 	private String name;
 	private String phone;
 	private String email;
+	
+	public ContactDTO(String name, String phone, String email) {
+		name = this.name;
+		phone = this.phone;
+		email = this.email;
+	}
+	public ContactDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public int getId() {
 		return id;
 	}

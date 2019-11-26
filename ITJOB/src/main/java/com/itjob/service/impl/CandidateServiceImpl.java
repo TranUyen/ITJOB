@@ -43,9 +43,8 @@ public class CandidateServiceImpl implements CandidateService{
 		dto.setExperience_years(candidateEntity.getProfile().getExperience_years());
 		dto.setId(candidateEntity.getProfile().getId());
 		dto.setProject(candidateEntity.getProfile().getProject());
-		dto.setSalary(candidateEntity.getProfile().getSalary());
 		dto.setTechnology_skill(candidateEntity.getProfile().getTechnology_skill());
-		dto.setType_work(candidateEntity.getProfile().getType_work());
+		dto.setOther_skill(candidateEntity.getProfile().getOther_skill());
 		
 		return dto;
 	}

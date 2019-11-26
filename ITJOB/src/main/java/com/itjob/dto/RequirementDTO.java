@@ -1,14 +1,24 @@
 package com.itjob.dto;
 
 public class RequirementDTO {
-	private String id;
+	private int id;
 	private String technology_skill;
 	private String experience;
 	private String degree;
-	public String getId() {
+	
+	public RequirementDTO(String technology_skill, String experience, String degree) {
+		this.degree = degree;
+		this.experience = experience;
+		this.technology_skill = technology_skill;
+	}
+	
+	public RequirementDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getTechnology_skill() {

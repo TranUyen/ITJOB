@@ -18,6 +18,18 @@ public class CompanyEntity {
 	private String email;
 	private String password;
 	
+	public CompanyEntity(int id, String name, String address, String phone, String email, String password) {
+		this.address = address;
+		this.email = email;
+		this.id = id;
+		this.name = name;
+		this.password = password;
+	}
+	
+	public CompanyEntity() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public String getPassword() {
 		return password;
 	}

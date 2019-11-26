@@ -16,33 +16,34 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PostEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private String id;
+	private int id;
 	private String time;
 	private String position;
 	private int no_member;
 	private String benefit;
 	private String JD;
-	private String deadline;
 	private String province;
-	private String district;
-	
+	private String salary;
+	private String typejob;
+	private String other_requirements;
+
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_companies")
 	private CompanyEntity companyEntity;
-	
+
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_requirement")
 	private RequirementEntity requirementEntity;
-	
+
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_contact")
 	private ContactEntity contactEntity;
-	
-	public String getId() {
+
+	public int getId() {
 		return id;
 	}
-	
-	public void setId(String id) {
+
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -86,28 +87,12 @@ public class PostEntity {
 		JD = jD;
 	}
 
-	public String getDeadline() {
-		return deadline;
-	}
-
-	public void setDeadline(String deadline) {
-		this.deadline = deadline;
-	}
-
 	public String getProvince() {
 		return province;
 	}
 
 	public void setProvince(String province) {
 		this.province = province;
-	}
-
-	public String getDistrict() {
-		return district;
-	}
-
-	public void setDistrict(String district) {
-		this.district = district;
 	}
 
 	public CompanyEntity getCompanyEntity() {
@@ -134,5 +119,28 @@ public class PostEntity {
 		this.contactEntity = contactEntity;
 	}
 	
+	public String getSalary() {
+		return salary;
+	}
 	
+	public void setSalary(String salary) {
+		this.salary = salary;
+	}
+	
+	public String getTypejob() {
+		return typejob;
+	}
+	
+	public void setTypejob(String typejob) {
+		this.typejob = typejob;
+	}
+	
+	public String getOther_requirements() {
+		return other_requirements;
+	}
+	
+	public void setOther_requirements(String other_requirements) {
+		this.other_requirements = other_requirements;
+	}
+
 }

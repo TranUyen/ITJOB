@@ -19,8 +19,10 @@
 	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/css/owl.theme.default.min.css"/>'/>
 	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/fonts/icomoon/style.css"/>'/>
 	<link rel="stylesheet" type="text/css" media="all" href='<c:url value="/template/web/fonts/flaticon/font/flaticon.css"/>'/>
-	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
+	 
 </head>
 <body>
 	<div class="site-wrap">
@@ -55,6 +57,7 @@
 	<script type="text/javascript" src='<c:url value="/template/web/js/main.js"/>'></script>
 	<script type="text/javascript" src='<c:url value="/template/web/js/popper.min.js"/>'></script>
 	<script type="text/javascript" src='<c:url value="/template/web/js/click.min.js"/>'></script>
+	
 	
 </body>
 </html>
