@@ -15,7 +15,7 @@ import com.itjob.dto.CompanyDTO;
 import com.itjob.service.CandidateService;
 import com.itjob.service.CompanyService;
 
-@Controller
+@Controller(value = "loginPageOfWeb")
 @RequestMapping(path = "dang-nhap")
 public class LoginController {
 	
