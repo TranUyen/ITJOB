@@ -16,7 +16,7 @@ import com.itjob.service.CandidateService;
 import com.itjob.service.CompanyService;
 
 @Controller(value = "loginPageOfWeb")
-@RequestMapping(path = "dang-nhap")
+@RequestMapping(path = "/dang-nhap")
 public class LoginController {
 	
 	@Autowired
