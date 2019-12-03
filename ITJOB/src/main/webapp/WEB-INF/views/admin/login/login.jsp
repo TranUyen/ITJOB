@@ -18,7 +18,7 @@
     </div>
 
     <!-- Login Form -->
-    <form action="j_spring_security_check" method="POST">
+    <form action="<c:url value="/j_spring_security_check"></c:url>" method="POST">
         <input type="text" id="login" class="fadeIn second" name="j_username" placeholder="Tên đăng nhập">
         <input type="password" id="password" class="fadeIn third" name="j_password" placeholder="Mật khẩu">
         <input type="submit" class="fadeIn fourth" value="Đăng nhập">

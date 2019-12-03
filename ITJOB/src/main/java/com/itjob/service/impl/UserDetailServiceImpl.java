@@ -38,6 +38,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
                 true,
                 true,
                 authorities);
+        userDTO.setFullName(userEntity.getFullName());
         return userDTO;
     }
 }

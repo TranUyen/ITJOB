@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.itjob.dto.PostDTO;
 import com.itjob.service.PostService;
 
-@Controller
+@Controller(value = "homePageOfWeb")
 @RequestMapping(path = {"/","trang-chu"})
 public class HomeController {
 	
