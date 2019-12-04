@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 @Controller(value = "loginPageOfAdmin")
 public class LoginController {
     @RequestMapping(value = "/admin-login", method = RequestMethod.GET)
-    public ModelAndView homePage() {
+    public ModelAndView adminLoginPage() {
         ModelAndView modelAndView = new ModelAndView("admin/login/login");
         return modelAndView;
     }
 
     @RequestMapping(value = "/logout-admin", method = RequestMethod.GET)
-    public ModelAndView loginPageAdmin(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView adminLogoutPage(HttpServletRequest request, HttpServletResponse response) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null) {
             new SecurityContextLogoutHandler().logout(request, response, authentication);
