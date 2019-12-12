@@ -36,10 +36,10 @@
 								<li class="has-children"><a href=""><span>${company.getName() }
 									</span> </a>
 									<ul class="dropdown">
-										<li><a href="<c:url value="/dang-ky-cong-ty"/>">Hồ Sơ</a></li>
+										<li><a href="<c:url value="/trang-chu-cong-ty/cong-ty"/>">Các bài viết đã đăng</a></li>
 										<li><a href="<c:url value="/dang-ky-ung-vien"/>">Đổi
 												mật khẩu</a></li>
-										<li><a href="<c:url value="/dang-ky-ung-vien"/>">Đăng
+										<li><a href="<c:url value="/dang-xuat"/>">Đăng
 												xuất</a></li>
 									</ul></li>
 								<img style="height: 27px; padding-bottom: 5px" class="btnLogin"
@@ -53,7 +53,7 @@
 										<li><a href="<c:url value="/dang-ky-cong-ty"/>">Hồ Sơ</a></li>
 										<li><a href="<c:url value="/dang-ky-ung-vien"/>">Đổi
 												mật khẩu</a></li>
-										<li><a href="<c:url value="/dang-ky-ung-vien"/>">Đăng
+										<li><a href="<c:url value="/dang-xuat"/>">Đăng
 												xuất</a></li>
 									</ul></li>
 								<img style="height: 27px; padding-bottom: 5px" class="btnLogin"

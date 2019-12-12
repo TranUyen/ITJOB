@@ -27,11 +27,37 @@ public class CompanyDAOimpl implements CompanyDAO {
 		try {
 			return (CompanyEntity) session.createQuery(hql).setParameter("email", email).setParameter("password",
 					password).getSingleResult();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
 		}
 
+	}
+	
+	@Override
+	public boolean checkRegisterCompany(String email) {
+		Session session = sessionFactory.getCurrentSession();
+		String hql = "from CompanyEntity where email = :email";
+		try {
+			CompanyEntity companyEntity = (CompanyEntity) session.createQuery(hql).setParameter("email", email).getSingleResult();
+			return false;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return true;
+		}
+	}
+	
+	@Override
+	public boolean register(CompanyEntity companyEntity) {
+		Session session = sessionFactory.getCurrentSession();
+		try {
+			session.save(companyEntity);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+		
 	}
 
 }

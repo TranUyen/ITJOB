@@ -8,4 +8,5 @@ public interface PostDAO {
 	public boolean addPost(PostEntity postEntity);
 	public ArrayList<PostEntity> showListPost();
 	public PostEntity detailPost(int id);
+	public ArrayList<PostEntity> listPostOfCompany(int idCompany);
 }

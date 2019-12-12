@@ -38,4 +38,6 @@ public class Post_ProfileServiceImpl implements Post_ProfileService {
 				return false;
 			}
 	}
+	
+	
 }

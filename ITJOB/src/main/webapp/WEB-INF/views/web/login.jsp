@@ -12,7 +12,7 @@
 
 	<div class="container">
 		<h1 class="text-center">Đăng nhập</h1>
-		<form action="#" class="needs-validation"
+		<form  class="needs-validation"
 			action="<c:url value="/dang-nhap"/>" method="post" novalidate
 			style="margin-left: 20%; margin-right: 20%;">
 			<c:if test="${not empty errLogin}">

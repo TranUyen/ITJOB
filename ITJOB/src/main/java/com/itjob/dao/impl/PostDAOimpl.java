@@ -46,11 +46,27 @@ public class PostDAOimpl implements PostDAO{
 		
 	}
 	
+	
 	@Override
 	public PostEntity detailPost(int id) {
 		Session session = this.sessionFactory.getCurrentSession();
 		try {
-			return (PostEntity) session.createQuery("from PostEntity where id=: id").setParameter("id", id).getSingleResult();
+			
+			return (PostEntity) session.createQuery("from PostEntity where id=:id").setParameter("id", id).getSingleResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public ArrayList<PostEntity> listPostOfCompany(int idCompany) {
+		Session session = sessionFactory.getCurrentSession();
+		try {
+			CompanyEntity companyEntity = (CompanyEntity) session.createQuery("from CompanyEntity where id=:id").setParameter("id", idCompany).getSingleResult();
+			return (ArrayList<PostEntity>) session.createQuery("from PostEntity where CompanyEntity =:companyEntity").setParameter("companyEntity", companyEntity).getResultList();
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;

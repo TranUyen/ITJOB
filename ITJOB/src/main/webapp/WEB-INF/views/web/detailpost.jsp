@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="unit-5 overlay"
-		style="background-image: url('template/web/images/hero_bg_2.jpg');">
+		style="background-image: url('template/web/images/hero_bg_3.jpg');">
 		<div class="container text-center">
 			<h2 class="mb-0">Chi tiết bài đăng</h2>
 			<p class="mb-0 unit-6">

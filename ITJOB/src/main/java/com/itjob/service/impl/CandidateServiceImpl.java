@@ -1,5 +1,7 @@
 package com.itjob.service.impl;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,4 +51,18 @@ public class CandidateServiceImpl implements CandidateService{
 		return dto;
 	}
 
+	@Override
+	public boolean checkRegisterCandidate(String email) {
+		return cadidateDAO.checkRegisterCandidate(email);
+	}
+
+	@Override
+	public boolean registerCandidate(CandidateEntity candidateEntity) {
+		return cadidateDAO.registerCandidate(candidateEntity);
+	}
+	
+	@Override
+	public ArrayList<CandidateEntity> listCandidate() {
+		return cadidateDAO.listCandidate();
+	}
 }

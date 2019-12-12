@@ -53,7 +53,7 @@ public class LoginController {
 				map.addAttribute("company", companyDTO);
 				session.setAttribute("company", companyDTO);
 				
-				return "redirect:/";
+				return "redirect:/trang-chu-cong-ty";
 			}else {
 				map.addAttribute("errLogin", "Email hoặc mật khẩu không chính xác");
 			}

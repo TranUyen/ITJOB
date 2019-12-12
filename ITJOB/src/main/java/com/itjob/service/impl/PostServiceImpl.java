@@ -52,6 +52,13 @@ public class PostServiceImpl implements PostService {
 		return postDTO;
 	}
 	
+	
+	@Override
+	public ArrayList<PostEntity> listPostOfCompany(int id) {
+
+		return PostDAO.listPostOfCompany(id);
+	}
+	
 	public static PostDTO convertEntityToDTO(PostEntity postEntity) {
 		PostDTO postDTO = new PostDTO();
 		CompanyDTO companyDTO = new CompanyDTO(postEntity.getCompanyEntity().getId(), postEntity.getCompanyEntity().getName(), postEntity.getCompanyEntity().getAddress(), postEntity.getCompanyEntity().getPhone(), postEntity.getCompanyEntity().getEmail(), postEntity.getCompanyEntity().getPassword());

@@ -1,5 +1,10 @@
 package com.itjob.dto;
 
+import java.util.ArrayList;
+import java.util.Set;
+
+import com.itjob.entity.PostEntity;
+
 public class CompanyDTO {
 
 	private int id;
@@ -8,6 +13,7 @@ public class CompanyDTO {
 	private String phone;
 	private String email;
 	private String password;
+	private Set<PostEntity> listpost;
 	
 	public CompanyDTO(int id, String name, String address, String phone, String email, String password) {
 		this.address = address;
@@ -17,8 +23,17 @@ public class CompanyDTO {
 		this.password = password;
 	}
 	
+	
 	public CompanyDTO() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public Set<PostEntity> getListpost() {
+		return listpost;
+	}
+	
+	public void setListpost(Set<PostEntity> listpost) {
+		this.listpost = listpost;
 	}
 	
 	public int getId() {

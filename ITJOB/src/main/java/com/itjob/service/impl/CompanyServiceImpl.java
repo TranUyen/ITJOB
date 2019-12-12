@@ -16,9 +16,12 @@ public class CompanyServiceImpl implements CompanyService{
 	@Override
 	public CompanyDTO checkLoginCompany(String email, String password) {
 		CompanyEntity company = companyDAO.checkLoginCompany(email, password);
+		
 		if(company == null) {
 			return null;
 		}else {
+			System.out.println(company);
+			System.out.println(company.getListpost());
 			CompanyDTO companyDTO = new CompanyDTO();
 			companyDTO.setId(company.getId());
 			companyDTO.setName(company.getName());
@@ -26,10 +29,21 @@ public class CompanyServiceImpl implements CompanyService{
 			companyDTO.setPassword(company.getPassword());
 			companyDTO.setAddress(company.getAddress());
 			companyDTO.setPhone(company.getPhone());
-			
+			companyDTO.setListpost(company.getListpost());
 			return companyDTO;
 		}
 		
+	}
+
+	@Override
+	public boolean checkRegisterCompany(String email) {
+		return companyDAO.checkRegisterCompany(email);
+	}
+
+	@Override
+	public boolean register(CompanyEntity companyEntity) {
+		
+		return companyDAO.register(companyEntity);
 	}
 
 }
