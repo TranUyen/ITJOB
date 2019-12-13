@@ -17,19 +17,12 @@
 			<div class="col-10 col-xl-10 d-none d-xl-block">
 				<nav class="site-navigation text-right" role="navigation">
 
-					<ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li class="has-children"><a href="category.html">Category</a>
-							<ul class="dropdown">
-								<li><a href="#">Full Time</a></li>
-								<li><a href="#">Part Time</a></li>
-								<li><a href="#">Freelance</a></li>
-								<li><a href="#">Internship</a></li>
-								<li><a href="#">Termporary</a></li>
-							</ul></li>
+					<ul class="site-menu js-clone-nav mr-auto d-none d-lg-block font-weight-bold">
+						<li class="active"><a href="index.html">Trang chủ</a></li>
+						
 						<li><a href="blog.html">Blog</a></li>
 						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="contact.html">Thông tin liên hệ</a></li>
 						<c:choose>
 
 							<c:when test="${not empty company}">

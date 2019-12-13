@@ -14,32 +14,38 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.itjob.dto.CompanyDTO;
 import com.itjob.entity.CompanyEntity;
 import com.itjob.entity.PostEntity;
+import com.itjob.service.CompanyService;
 import com.itjob.service.PostService;
 
 @Controller
-@RequestMapping(path = "trang-chu-cong-ty/cong-ty")
+@RequestMapping(path = "trang-chu-cong-ty")
 public class ProfileCompany {
 	
 	@Autowired
-	private PostService postService;
+	private CompanyService companyService;
 	
-	@GetMapping
+	@GetMapping(path = "/cong-ty")
 	public String profileCompany(HttpSession session, ModelMap map) {
 		
 		CompanyDTO companyDTO = (CompanyDTO) session.getAttribute("company");
 		if(companyDTO == null) {
-			return "404";
+			return "web/login";
 		}else {
-			//Set<PostEntity> listpost =  companyDTO.getListpost();
+			CompanyDTO company = companyService.checkLoginCompany(companyDTO.getEmail(), companyDTO.getPassword());
 			//System.out.println(listpost.);
-			System.out.println(companyDTO.getEmail());
-			System.out.println(companyDTO.getListpost());
-			map.addAttribute("listpost", companyDTO.getListpost());
+			System.out.println(company.getEmail());
+			System.out.println(company.getListpost());
+			map.addAttribute("listpost", company.getListpost());
 			
 			return "web/profile_company";
 		}
 		
 		
+	}
+	
+	@GetMapping(path = "/danh-sach-ung-vien")
+	public String listCandidate() {
+		return "web/listcompany_post";
 	}
 	
 	

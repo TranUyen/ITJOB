@@ -1,5 +1,7 @@
 package com.itjob.controller.web;
 
+import java.util.Set;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import com.itjob.dto.CandidateDTO;
 import com.itjob.dto.PostDTO;
 import com.itjob.dto.Post_ProfileDTO;
 import com.itjob.dto.ProfileDTO;
+import com.itjob.entity.Post_ProfileEntity;
 import com.itjob.service.PostService;
 import com.itjob.service.Post_ProfileService;
 
@@ -41,6 +44,7 @@ public class DetailPost {
 	public String Apply(@PathVariable int id, HttpSession session) {
 		
 		CandidateDTO candidateDTO = (CandidateDTO) session.getAttribute("candidate");
+		
 		Post_ProfileDTO post_ProfileDTO = new Post_ProfileDTO();
 		PostDTO postDTO = postService.detailPost(id);
 		post_ProfileDTO.setPostDTO(postDTO);
@@ -54,6 +58,19 @@ public class DetailPost {
 		}else {
 			return "error";
 		}
+		
+		
+		
+	}
+	
+	@GetMapping(path = "/{id}/danh-sach-ung-tuyen")
+	public String listCandidate(@PathVariable int id) {
+		PostDTO postDTO = postService.detailPost(id);
+		Set<Post_ProfileEntity> list = postDTO.getList();
+		for (Post_ProfileEntity post_profile : list) {
+			System.out.println(post_profile.getProfileEntity().getListProfile());
+		}
+		return "web/listcompany_post";
 		
 	}
 }

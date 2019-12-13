@@ -1,13 +1,19 @@
 package com.itjob.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.print.attribute.HashAttributeSet;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -38,6 +44,17 @@ public class PostEntity {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_contact")
 	private ContactEntity contactEntity;
+
+	@OneToMany(mappedBy = "postEntity",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
+	private Set<Post_ProfileEntity> list = new HashSet<Post_ProfileEntity>();
+
+	public Set<Post_ProfileEntity> getList() {
+		return list;
+	}
+
+	public void setList(Set<Post_ProfileEntity> list) {
+		this.list = list;
+	}
 
 	public int getId() {
 		return id;
@@ -118,27 +135,27 @@ public class PostEntity {
 	public void setContactEntity(ContactEntity contactEntity) {
 		this.contactEntity = contactEntity;
 	}
-	
+
 	public String getSalary() {
 		return salary;
 	}
-	
+
 	public void setSalary(String salary) {
 		this.salary = salary;
 	}
-	
+
 	public String getTypejob() {
 		return typejob;
 	}
-	
+
 	public void setTypejob(String typejob) {
 		this.typejob = typejob;
 	}
-	
+
 	public String getOther_requirements() {
 		return other_requirements;
 	}
-	
+
 	public void setOther_requirements(String other_requirements) {
 		this.other_requirements = other_requirements;
 	}

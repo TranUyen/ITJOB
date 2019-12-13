@@ -116,8 +116,14 @@
 
 						<div class="row form-group">
 							<div class="col-md-12">
+							<c:if test="${not empty company}">
+								<input type="button" id="list_candidate" value="Danh sách các ứng viên"
+									class="btn btn-primary  py-2 px-5">
+							</c:if>
+							<c:if test="${empty company}">
 								<input type="button" id="ung_tuyen" value="Ứng Tuyển"
 									class="btn btn-primary  py-2 px-5">
+							</c:if>
 							</div>
 						</div>
 

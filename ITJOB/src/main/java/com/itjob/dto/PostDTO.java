@@ -1,7 +1,10 @@
 package com.itjob.dto;
 
+import java.util.Set;
+
 import com.itjob.entity.CompanyEntity;
 import com.itjob.entity.ContactEntity;
+import com.itjob.entity.Post_ProfileEntity;
 import com.itjob.entity.RequirementEntity;
 
 public class PostDTO {
@@ -18,6 +21,16 @@ public class PostDTO {
 	private RequirementDTO requirementDTO;
 	private ContactDTO contactDTO;
 	private String other_requirements;
+	private Set<Post_ProfileEntity> list;
+	
+	
+	public Set<Post_ProfileEntity> getList() {
+		return list;
+	}
+	
+	public void setList(Set<Post_ProfileEntity> list) {
+		this.list = list;
+	}
 	
 	public int getId() {
 		return id;

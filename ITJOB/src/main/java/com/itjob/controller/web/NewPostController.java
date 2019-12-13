@@ -29,8 +29,13 @@ public class NewPostController {
 	private PostService PostService;
 	
 	@GetMapping
-	public String newPost() {
-		return "web/newpost";
+	public String newPost(HttpSession session) {
+		CompanyDTO companyDTO = (CompanyDTO) session.getAttribute("company");
+		if(companyDTO != null) {
+			return "web/newpost";
+			
+		}
+		return "web/login";
 	}
 
 	@PostMapping
@@ -56,7 +61,7 @@ public class NewPostController {
 			postDTO.setOther_requirements(yeucaukhac);
 			postDTO.setTime(java.time.LocalDate.now().toString());
 			PostService.addPost(postDTO);
-			return "redirect:/home_company";
+			return "redirect:/trang-chu-cong-ty/cong-ty";
 		
 		
 	}

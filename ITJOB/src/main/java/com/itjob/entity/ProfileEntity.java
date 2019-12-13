@@ -1,13 +1,18 @@
 package com.itjob.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.hibernate.mapping.Set;
+
 
 @Entity
 @Table(name = "profiles")
@@ -21,7 +26,18 @@ public class ProfileEntity {
 	private String technology_skill;
 	private String project;
 	private String other_skill;
-
+	
+	@OneToMany(mappedBy = "profile",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
+	private Set<ProfileEntity> listProfile = new HashSet<ProfileEntity>();
+	
+	public Set<ProfileEntity> getListProfile() {
+		return listProfile;
+	}
+	
+	public void setListProfile(Set<ProfileEntity> listProfile) {
+		this.listProfile = listProfile;
+	}
+	
 	public int getId() {
 		return id;
 	}

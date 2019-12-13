@@ -53,11 +53,7 @@ public class PostServiceImpl implements PostService {
 	}
 	
 	
-	@Override
-	public ArrayList<PostEntity> listPostOfCompany(int id) {
-
-		return PostDAO.listPostOfCompany(id);
-	}
+	
 	
 	public static PostDTO convertEntityToDTO(PostEntity postEntity) {
 		PostDTO postDTO = new PostDTO();
@@ -85,6 +81,7 @@ public class PostServiceImpl implements PostService {
 		postDTO.setProvince(postEntity.getProvince());
 		postDTO.setTime(postEntity.getTime());
 		postDTO.setTypejob(postEntity.getTypejob());
+		postDTO.setList(postEntity.getList());
 		
 		return postDTO;
 		
@@ -122,6 +119,7 @@ public class PostServiceImpl implements PostService {
 		postEntity.setSalary(postDTO.getSalary());
 		postEntity.setTypejob(postDTO.getTypejob());
 		postEntity.setOther_requirements(postDTO.getOther_requirements());
+		
 		
 		return postEntity;
 	}

@@ -16,5 +16,5 @@ public interface PostService {
 
 	public PostDTO detailPost(int id);
 	
-	public ArrayList<PostEntity> listPostOfCompany(int id);
+	
 }

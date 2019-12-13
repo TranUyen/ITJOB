@@ -25,7 +25,7 @@ public class CompanyEntity {
 	private String email;
 	private String password;
 	
-	@OneToMany(mappedBy = "id",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
+	@OneToMany(mappedBy = "companyEntity",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
 	private Set<PostEntity> listpost = new HashSet<PostEntity>();
 	
 	public CompanyEntity(int id, String name, String address, String phone, String email, String password) {

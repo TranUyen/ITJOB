@@ -27,7 +27,7 @@
 
 					
 
-						<h3 class="font-weight-bold" >Danh sách các bài đăng</h3>
+						<h3 class="font-weight-bold" >Danh sách ứng viên</h3>
 					<c:forEach items="${listpost}" var="post">
 						<div class="row">
 					         <div class="col-md-12">
@@ -60,7 +60,7 @@
 
 						
 				<div class="col-lg-4">
-					<h3 class="font-weight-bold" >Thông tin công ty</h3>
+					<h3 class="font-weight-bold" >Thông tin bài viết</h3>
 					
 					<div class="p-4 mb-3 bg-white">
 						<div class="row form-group " style="margin-bottom: 0;">
