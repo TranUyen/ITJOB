@@ -28,14 +28,14 @@ public class ProfileEntity {
 	private String other_skill;
 	
 	@OneToMany(mappedBy = "profile",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
-	private Set<ProfileEntity> listProfile = new HashSet<ProfileEntity>();
+	private Set<CandidateEntity> listCandidateEntities = new HashSet<CandidateEntity>();
 	
-	public Set<ProfileEntity> getListProfile() {
-		return listProfile;
+	public Set<CandidateEntity> getListCandidateEntities() {
+		return listCandidateEntities;
 	}
 	
-	public void setListProfile(Set<ProfileEntity> listProfile) {
-		this.listProfile = listProfile;
+	public void setListCandidateEntities(Set<CandidateEntity> listCandidateEntities) {
+		this.listCandidateEntities = listCandidateEntities;
 	}
 	
 	public int getId() {

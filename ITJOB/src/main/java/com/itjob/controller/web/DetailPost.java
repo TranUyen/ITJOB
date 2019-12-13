@@ -1,5 +1,6 @@
 package com.itjob.controller.web;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 import javax.servlet.http.HttpSession;
@@ -16,6 +17,7 @@ import com.itjob.dto.CandidateDTO;
 import com.itjob.dto.PostDTO;
 import com.itjob.dto.Post_ProfileDTO;
 import com.itjob.dto.ProfileDTO;
+import com.itjob.entity.CandidateEntity;
 import com.itjob.entity.Post_ProfileEntity;
 import com.itjob.service.PostService;
 import com.itjob.service.Post_ProfileService;
@@ -64,12 +66,17 @@ public class DetailPost {
 	}
 	
 	@GetMapping(path = "/{id}/danh-sach-ung-tuyen")
-	public String listCandidate(@PathVariable int id) {
+	public String listCandidate(@PathVariable int id, ModelMap map) {
 		PostDTO postDTO = postService.detailPost(id);
 		Set<Post_ProfileEntity> list = postDTO.getList();
+		ArrayList<CandidateEntity> listCandidate = new ArrayList<CandidateEntity>();
 		for (Post_ProfileEntity post_profile : list) {
-			System.out.println(post_profile.getProfileEntity().getListProfile());
+			Set<CandidateEntity> candidates = post_profile.getProfileEntity().getListCandidateEntities();
+			for (CandidateEntity candidateEntity : candidates) {
+				listCandidate.add(candidateEntity);
+			}
 		}
+		map.addAttribute("listCandidate", listCandidate);
 		return "web/listcompany_post";
 		
 	}

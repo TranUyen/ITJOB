@@ -28,21 +28,21 @@
 					
 
 						<h3 class="font-weight-bold" >Danh sách ứng viên</h3>
-					<c:forEach items="${listpost}" var="post">
+					<c:forEach items="${listCandidate}" var="candidate">
 						<div class="row">
 					         <div class="col-md-12">
 					           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
 					
 					              <div class="mb-4 mb-md-0 mr-5">
 					               <div class="job-post-item-header d-flex align-items-center">
-					                 <h2 class="mr-3 text-black h4">${post.getPosition() }</h2>
+					                 <h2 class="mr-3 text-black h4">${candidate.getName() }</h2>
 					                 <div class="badge-wrap">
-					                  <span class="bg-warning text-white badge py-2 px-4">${post.getSalary() }</span>
+					                  <span class="bg-warning text-white badge py-2 px-4">${candidate.getProfile().getExperience_years() }</span>
 					                 </div>
 					               </div>
 					               <div class="job-post-item-body d-block d-md-flex">
-					                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span>${post.getRequirementEntity().getDegree() }</div>
-					                 <div class="mr-3"><span class="fl-bigmug-line-big104"></span> ${post.getProvince() }<span></span></div>
+					                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span>${candidate.getProfile().getTechnology_skill() }</div>
+					                 <div class="mr-3"><span class="fl-bigmug-line-big104"></span> ${candidate.getEmail() }  <span></span></div>
 					                 <div><span class="fl-bigmug-line-alarm31"></span> ${post.getTime()}<span></span></div>
 					               </div>
 					              </div>
