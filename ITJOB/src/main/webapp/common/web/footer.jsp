@@ -62,7 +62,7 @@
               </li>
               <li>
                 <span class="d-block text-white">Email</span>
-                team10@gmail.comH
+                team10@gmail.com
               </li>
             </ul>
 
