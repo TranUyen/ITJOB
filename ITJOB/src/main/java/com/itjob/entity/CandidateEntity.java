@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -28,7 +28,7 @@ public class CandidateEntity {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_profiles")
 	private ProfileEntity profile;
-
+	
 	public String getName() {
 		return name;
 	}

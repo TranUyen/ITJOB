@@ -80,7 +80,6 @@ public class DetailPost {
 			ArrayList<CandidateEntity> listCandidate = new ArrayList<CandidateEntity>();
 			for (Post_ProfileEntity post_profile : list) {
 				Set<CandidateEntity> candidates = post_profile.getProfileEntity().getListCandidateEntities();
-				//PostEntity postEntity = post_profile.getPostEntity();
 				for (CandidateEntity candidateEntity : candidates) {
 					listCandidate.add(candidateEntity);
 				}

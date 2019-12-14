@@ -8,6 +8,8 @@ public class CandidateDTO {
 	private String password;
 	private int sex;
 	private ProfileDTO profileDTO;
+	//private Set<Post_ProfileEntity> Post_ProfileEntity;
+	
 	public int getId() {
 		return id;
 	}

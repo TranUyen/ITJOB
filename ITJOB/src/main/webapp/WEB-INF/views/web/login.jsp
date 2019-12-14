@@ -33,8 +33,7 @@
 				<label for="inputPassword">Password</label> <input type="password"
 					class="form-control" id="inputPassword" placeholder="Password"
 					required name="password">
-				<div class="invalid-feedback">Please enter your password to
-					continue.</div>
+				<div class="invalid-feedback"></div>
 			</div>
 			<div class="form-group">
 				<label class="form-check-label"><input type="checkbox">

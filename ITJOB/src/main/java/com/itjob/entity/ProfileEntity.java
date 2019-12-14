@@ -33,6 +33,18 @@ public class ProfileEntity {
 	@JsonIgnore
 	private Set<CandidateEntity> listCandidateEntities = new HashSet<CandidateEntity>();
 	
+	@OneToMany(mappedBy = "profileEntity", cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
+	@JsonIgnore
+	private Set<Post_ProfileEntity> listPost_ProfileEntities = new HashSet<Post_ProfileEntity>();
+	
+	public Set<Post_ProfileEntity> getListPost_ProfileEntities() {
+		return listPost_ProfileEntities;
+	}
+	
+	public void setListPost_ProfileEntities(Set<Post_ProfileEntity> listPost_ProfileEntities) {
+		this.listPost_ProfileEntities = listPost_ProfileEntities;
+	}
+	
 	public Set<CandidateEntity> getListCandidateEntities() {
 		return listCandidateEntities;
 	}
