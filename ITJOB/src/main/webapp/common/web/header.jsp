@@ -18,18 +18,21 @@
 				<nav class="site-navigation text-right" role="navigation">
 
 					<ul class="site-menu js-clone-nav mr-auto d-none d-lg-block font-weight-bold">
-						<li class="active"><a href="index.html">Trang chủ</a></li>
-
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Thông tin liên hệ</a></li>
+						
 						<c:choose>
 
 							<c:when test="${not empty company}">
+								<li class="active"><a href="<c:url value="/trang-chu-cong-ty"/>">Trang chủ</a></li>
+
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Thông tin liên hệ</a></li>
+							
 								<li class="has-children"><a href=""><span>${company.getName() }
 									</span> </a>
 									<ul class="dropdown">
 										<li><a href="<c:url value="/trang-chu-cong-ty/cong-ty"/>">Các bài viết đã đăng</a></li>
+	
 										<li><a href="<c:url value="/dang-ky-ung-vien"/>">Đổi
 												mật khẩu</a></li>
 										<li><a href="<c:url value="/dang-xuat"/>">Đăng
@@ -40,10 +43,17 @@
 							</c:when>
 
 							<c:when test="${not empty candidate}">
+							
+							<li class="active"><a href="<c:url value="/"/>">Trang chủ</a></li>
+
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Thông tin liên hệ</a></li>
 								<li class="has-children"><a href=""><span>${candidate.getName() }
 									</span> </a>
 									<ul class="dropdown">
 										<li><a href="<c:url value="/cac-bai-ung-tuyen"/>">Bài viết đã ứng tuyển</a></li>
+										<li><a href="<c:url value="/chi-tiet-ung-vien/${candidate.getId()}"/>">Thông tin cá nhân</a></li>
 										<li><a href="<c:url value="/dang-ky-ung-vien"/>">Đổi
 												mật khẩu</a></li>
 										<li><a href="<c:url value="/dang-xuat"/>">Đăng
@@ -54,6 +64,11 @@
 							</c:when>
 
 							<c:otherwise>
+								<li class="active"><a href="<c:url value="/"/>">Trang chủ</a></li>
+
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Thông tin liên hệ</a></li>
 								<li><a href="<c:url value="/dang-nhap"/>">Đăng nhập</a></li>
 								<li class="has-children"><a href=""><span>Đăng
 											ký </span> </a>

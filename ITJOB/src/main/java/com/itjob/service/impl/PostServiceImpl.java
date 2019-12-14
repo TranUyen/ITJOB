@@ -101,10 +101,11 @@ public class PostServiceImpl implements PostService {
 
 		CompanyEntity companyEntity = new CompanyEntity();
 		companyEntity.setId(postDTO.getCompanyDTO().getId());
+		companyEntity.setName(postDTO.getCompanyDTO().getName());
 		companyEntity.setAddress(postDTO.getCompanyDTO().getAddress());
 		companyEntity.setEmail(postDTO.getCompanyDTO().getEmail());
-		companyEntity.setPassword(postDTO.getCompanyDTO().getPassword());
 		companyEntity.setPhone(postDTO.getCompanyDTO().getPhone());
+		companyEntity.setPassword(postDTO.getCompanyDTO().getPassword());
 
 		PostEntity postEntity = new PostEntity();
 		postEntity.setBenefit(postDTO.getBenefit());

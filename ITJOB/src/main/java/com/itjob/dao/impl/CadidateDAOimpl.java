@@ -81,6 +81,20 @@ public class CadidateDAOimpl implements CadidateDAO {
 		}
 	}
 	
+	@Override
+	public CandidateEntity infoCandidate(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		String hql = "from CandidateEntity where id =: id";
+		try {
+			 CandidateEntity candidateEntity = (CandidateEntity) session.createQuery(hql).setParameter("id",id).getSingleResult();
+			 return candidateEntity;
+			
+		} catch (Exception e) {
+			
+			return null;
+		}
+	}
+	
 	
 
 }

@@ -201,6 +201,7 @@
 			success : function(response){
 				if(response == "OK"){
 					alert("ung tuyen thanh cong");
+					window.location.replace("/ITJOB/cac-bai-ung-tuyen");
 				}else if(response == "null"){
 					alert("Bạn chưa đăng nhập");
 					window.location.replace("/ITJOB/dang-nhap")

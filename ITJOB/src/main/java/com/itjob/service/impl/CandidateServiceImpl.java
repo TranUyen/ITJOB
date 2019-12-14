@@ -65,4 +65,10 @@ public class CandidateServiceImpl implements CandidateService{
 	public ArrayList<CandidateEntity> listCandidate() {
 		return cadidateDAO.listCandidate();
 	}
+	
+	@Override
+	public CandidateEntity infoCandidate(int id) {
+		
+		return cadidateDAO.infoCandidate(id);
+	}
 }

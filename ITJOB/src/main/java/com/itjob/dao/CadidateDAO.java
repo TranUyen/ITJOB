@@ -13,5 +13,7 @@ public interface CadidateDAO {
 	public boolean registerCandidate(CandidateEntity candidateEntity);
 	
 	public ArrayList<CandidateEntity> listCandidate();
+	
+	public CandidateEntity infoCandidate(int id);
 
 }
