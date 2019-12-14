@@ -11,9 +11,9 @@
 	<div class="unit-5 overlay"
 		style="background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-blue-tech-theme-globe-poster-background-image_153891.jpg');">
 		<div class="container text-center">
-			<h2 class="mb-0">Các ứng viên ứng tuyển</h2>
+			<h2 class="mb-0">Các bài viết đã ứng tuyển</h2>
 			<p class="mb-0 unit-6">
-				<a href="index.html">Trang chủ</a> <span class="sep">></span> <span>Các ứng viên</span>
+				<a href="index.html">Trang chủ</a> <span class="sep">></span> <span>Các bài viết</span>
 			</p>
 		</div>
 	</div>
@@ -27,43 +27,42 @@
 
 					
 
-						<h3 class="font-weight-bold" >Danh sách ứng viên</h3>
-					<c:forEach items="${listCandidate}"  var="candidate">
-					<c:forEach items="${list }" var= "x">
+						<h3 class="font-weight-bold" >Danh sách các bài viết</h3>
+					<c:forEach items="${listpost }"  var="post">
+					
 						<div class="row">
 					         <div class="col-md-12">
 					           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
-					
-					              <div class="mb-4 mb-md-0 mr-5">
+													              <div class="mb-4 mb-md-0 mr-5">
 					               <div class="job-post-item-header d-flex align-items-center">
-					                 <h2 class="mr-3 text-black h4">${candidate.getName() }</h2>
+					                 <h2 class="mr-3 text-black h4">${post.getPosition() }</h2>
 					                 <div class="badge-wrap">
-					                  <span class="bg-warning text-white badge py-2 px-4">${candidate.getProfile().getExperience_years() }</span>
+					                  <span class="bg-warning text-white badge py-2 px-4">${post.getCompanyEntity().getName() }</span>
 					                 </div>
 					               </div>
 					               <div class="job-post-item-body d-block d-md-flex">
-					                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span>${candidate.getProfile().getTechnology_skill() }</div>
-					                 <div class="mr-3"><span class="fl-bigmug-line-big104"></span> ${candidate.getEmail() }  <span></span></div>
+					                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span>${post.getProvince()}</div>
+					                 <div class="mr-3"><span class="fl-bigmug-line-big104"></span> ${post.getSalary() }  <span></span></div>
 					                 
-					                 <div><span class="fl-bigmug-line-alarm31"></span> ${x.getTime()}<span></span></div>
+					                 <div><span class="fl-bigmug-line-alarm31"></span> ${post.getTypejob()}<span></span></div>
 					               </div>
 					              </div>
 					
 					              <div class="ml-auto">
 					                
-					                <a href='<c:url value="/chi-tiet-bai-dang/${x.getTime() }"/>' class="btn btn-primary py-2">Chi tiết</a>
+					                <a href='<c:url value="/chi-tiet-bai-dang/${post.getId() }"/>' class="btn btn-primary py-2">Chi tiết</a>
 					              </div>
 					
 					           </div>
 					         </div>
 					        </div>
-					        </c:forEach>
+					       
 					       </c:forEach>
 	  				</div>
 
 						
 				<div class="col-lg-4">
-					<h3 class="font-weight-bold" >Thông tin bài viết</h3>
+					<h3 class="font-weight-bold" >Thông tin cá nhân</h3>
 					
 					<div class="p-4 mb-3 bg-white">
 						<div class="row form-group " style="margin-bottom: 0;">
@@ -75,21 +74,28 @@
 						<div class="row form-group " style="margin-bottom: 0;">
 							<div class="col-md-12 mb-3 mb-md-0">
 								<p>
-									<strong>Chức vụ:${post.getPosition() }</strong> <span> </span>
+									<strong>Họ và tên:${cadidate.getName() }</strong> <span> </span>
 								</p>
 							</div>
 						</div>
 						<div class="row form-group " style="margin-bottom: 0;">
 							<div class="col-md-12 mb-3 mb-md-0">
 								<p>
-									<strong>Số lượng:${post.getNo_member() }</strong> <span> </span>
+									<strong>Đia chỉ:${post.getNo_member() }</strong> <span> </span>
 								</p>
 							</div>
 						</div>
 						<div class="row form-group " style="margin-bottom: 0;">
 							<div class="col-md-12 mb-3 mb-md-0">
 								<p>
-									<strong>Lương:${post.getSalary() }</strong> <span> </span>
+									<strong>Số điện thoại:${post.getSalary() }</strong> <span> </span>
+								</p>
+							</div>
+						</div>
+						<div class="row form-group " style="margin-bottom: 0;">
+							<div class="col-md-12 mb-3 mb-md-0">
+								<p>
+									<strong>Email:${post.getSalary() }</strong> <span> </span>
 								</p>
 							</div>
 						</div>

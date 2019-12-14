@@ -8,63 +8,61 @@
           <div class="col-lg-9">
             <div class="row">
               <div class="col-6 col-md-3 col-lg-3 mb-5 mb-lg-0">
-                <h3 class="footer-heading mb-4">For Candidates</h3>
+                <h3 class="footer-heading mb-4">Dành cho ứng viên</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">Register</a></li>
-                  <li><a href="#">Find Jobs</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Search Jobs</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Đăng ký</a></li>
+                  <li><a href="#">Tìm kiếm công việc</a></li>
+                  <li><a href="#">Tin tức mới nhất</a></li>
+                  <li><a href="#">Liên hệ</a></li>
+                  <li><a href="#">Cơ hội nghề nghiệp</a></li>
                 </ul>
               </div>
               <div class="col-6 col-md-3 col-lg-3 mb-5 mb-lg-0">
-                <h3 class="footer-heading mb-4">For Employers</h3>
+                <h3 class="footer-heading mb-4">Dành cho công ty</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">Employer Account</a></li>
-                  <li><a href="#">Clients</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Find Candidates</a></li>
-                  <li><a href="#">Terms &amp; Policies</a></li>
-                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Đăng ký</a></li>
+                  <li><a href="#">Tìm kiếm ứng viên</a></li>
+                  <li><a href="#">Tin tức mới nhất</a></li>
+                  <li><a href="#">Liên hệ</a></li>
+                  <li><a href="#">Điều khoản và chính sách</a></li>
                 </ul>
               </div>
               <div class="col-6 col-md-3 col-lg-3 mb-5 mb-lg-0">
-                <h3 class="footer-heading mb-4">Archives</h3>
+                <h3 class="footer-heading mb-4">Tìm kiếm nâng câo</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">January 2018</a></li>
-                  <li><a href="#">February 2018</a></li>
-                  <li><a href="#">March 2018</a></li>
-                  <li><a href="#">April 2018</a></li>
-                  <li><a href="#">May 2018</a></li>
-                  <li><a href="#">June 2918</a></li>
+                  <li><a href="#">Tháng 12 2019</a></li>
+                  <li><a href="#">Tháng 11 2019</a></li>
+                  <li><a href="#">Tháng 10 2019</a></li>
+                  <li><a href="#">Tháng 09 2019</a></li>
+                  <li><a href="#">Tháng 08 2019</a></li>
+                  <li><a href="#">Tháng 07 2019</a></li>
                 </ul>
               </div>
               <div class="col-6 col-md-3 col-lg-3 mb-5 mb-lg-0">
-                <h3 class="footer-heading mb-4">Company</h3>
+                <h3 class="footer-heading mb-4">Về chúng tôi</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Terms &amp; Policies</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Thông tin</a></li>
+                  <li><a href="#">Nhóm 10</a></li>
+                  <li><a href="#">Điều khoản và chính sách</a></li>
+                  <li><a href="#">Liên hệ</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-lg-3">
-            <h3 class="footer-heading mb-4">Contact Info</h3>
+            <h3 class="footer-heading mb-4">Thông tin liên hệ</h3>
             <ul class="list-unstyled">
               <li>
-                <span class="d-block text-white">Address</span>
-                New York - 2398 10 Hadson Carl Street
+                <span class="d-block text-white">Địa chỉ</span>
+                Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội
               </li>
               <li>
-                <span class="d-block text-white">Telephone</span>
-                +1 232 305 3930
+                <span class="d-block text-white">Số điện thoại</span>
+                0968582598
               </li>
               <li>
                 <span class="d-block text-white">Email</span>
-                info@yourdomain.com
+                team10@gmail.comH
               </li>
             </ul>
 

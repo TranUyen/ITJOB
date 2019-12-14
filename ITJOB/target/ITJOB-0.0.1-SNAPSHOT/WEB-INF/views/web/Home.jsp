@@ -86,7 +86,7 @@
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{x.companyDTO.email}}</a></div>
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{x.companyEntity.name}}</a></div>
                  <div><span class="fl-bigmug-line-big104"></span> <span>{{x.province}}</span></div>
                </div>
               </div>
@@ -376,15 +376,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="text-white h4 font-weihgt-normal mb-4">Subscribe Newsletter</h2>
+            <h2 class="text-white h4 font-weihgt-normal mb-4">Đăng ký nhận thông tin mới nhất</h2>
           </div>
         </div>  
         <form action="" class="row">
           <div class="col-md-9">
-            <input type="text" class="form-control border-0 mb-3 mb-md-0" placeholder="Enter Your Email">
+            <input type="text" class="form-control border-0 mb-3 mb-md-0" placeholder="Vui lòng nhập Email của bạn">
           </div>
           <div class="col-md-3">
-            <input type="submit" value="Send" class="btn btn-dark btn-block" style="height: 45px;">  
+            <input type="submit" value="Đăng ký" class="btn btn-dark btn-block" style="height: 45px;">
           </div>
         </form>
       </div>
