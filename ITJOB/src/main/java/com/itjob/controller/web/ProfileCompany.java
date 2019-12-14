@@ -33,8 +33,6 @@ public class ProfileCompany {
 		}else {
 			CompanyDTO company = companyService.checkLoginCompany(companyDTO.getEmail(), companyDTO.getPassword());
 			//System.out.println(listpost.);
-			System.out.println(company.getEmail());
-			System.out.println(company.getListpost());
 			map.addAttribute("listpost", company.getListpost());
 			
 			return "web/profile_company";
@@ -43,10 +41,7 @@ public class ProfileCompany {
 		
 	}
 	
-	@GetMapping(path = "/danh-sach-ung-vien")
-	public String listCandidate() {
-		return "web/listcompany_post";
-	}
+	
 	
 	
 }

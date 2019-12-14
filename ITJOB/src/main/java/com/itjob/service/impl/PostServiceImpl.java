@@ -34,19 +34,16 @@ public class PostServiceImpl implements PostService {
 	}
 	
 	@Override
-	public ArrayList<PostDTO> showListPost() {
-		ArrayList<PostDTO> postDTOs = new ArrayList<PostDTO>();
+	public ArrayList<PostEntity> showListPost() {
+		//ArrayList<PostDTO> postDTOs = new ArrayList<PostDTO>();
 		ArrayList<PostEntity> arrayList = PostDAO.showListPost();
-		for (PostEntity array : arrayList) {
-			PostDTO postDTO = convertEntityToDTO(array);
-			postDTOs.add(postDTO);
-			
-		}
-		return postDTOs;
+		
+		return arrayList;
 	}
 	
 	@Override
 	public PostDTO detailPost(int id) {
+		//System.out.println(PostDAO.detailPost(id).getCompanyEntity().getName());
 		PostDTO postDTO = convertEntityToDTO(PostDAO.detailPost(id));
 				
 		return postDTO;
@@ -57,7 +54,7 @@ public class PostServiceImpl implements PostService {
 	
 	public static PostDTO convertEntityToDTO(PostEntity postEntity) {
 		PostDTO postDTO = new PostDTO();
-		CompanyDTO companyDTO = new CompanyDTO(postEntity.getCompanyEntity().getId(), postEntity.getCompanyEntity().getName(), postEntity.getCompanyEntity().getAddress(), postEntity.getCompanyEntity().getPhone(), postEntity.getCompanyEntity().getEmail(), postEntity.getCompanyEntity().getPassword());
+		CompanyDTO companyDTO = new CompanyDTO(postEntity.getCompanyEntity().getId(),  postEntity.getCompanyEntity().getName(), postEntity.getCompanyEntity().getAddress(), postEntity.getCompanyEntity().getPhone(), postEntity.getCompanyEntity().getEmail(), null);
 		postDTO.setCompanyDTO(companyDTO);
 		
 		RequirementDTO requirementDTO = new RequirementDTO();
@@ -67,7 +64,10 @@ public class PostServiceImpl implements PostService {
 		requirementDTO.setDegree(postEntity.getRequirementEntity().getDegree());
 		postDTO.setRequirementDTO(requirementDTO);
 		
-		ContactDTO contactDTO = new ContactDTO(postEntity.getContactEntity().getEmail(), postEntity.getContactEntity().getName(), postEntity.getContactEntity().getPhone());
+		ContactDTO contactDTO = new ContactDTO();
+		contactDTO.setEmail(postEntity.getContactEntity().getEmail());
+		contactDTO.setName(postEntity.getContactEntity().getName());
+		contactDTO.setPhone(postEntity.getContactEntity().getPhone());
 		contactDTO.setId(postEntity.getContactEntity().getId());
 		postDTO.setContactDTO(contactDTO);
 		

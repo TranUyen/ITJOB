@@ -1,5 +1,9 @@
 package com.itjob.dto;
 
+import java.util.Set;
+
+import com.itjob.entity.Post_ProfileEntity;
+
 public class ProfileDTO {
 	private int id;
 	private String degree;
@@ -7,7 +11,16 @@ public class ProfileDTO {
 	private String technology_skill;
 	private String project;
 	private String other_skill;
+	private Set<Post_ProfileEntity> listPost;
 
+	public Set<Post_ProfileEntity> getListPost() {
+		return listPost;
+	}
+	
+	public void setListPost(Set<Post_ProfileEntity> listPost) {
+		this.listPost = listPost;
+	}
+	
 	public int getId() {
 		return id;
 	}

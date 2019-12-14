@@ -30,9 +30,9 @@ public class HomeController {
 	
 	@GetMapping(path = "/lists" , produces = "application/json")
 	@ResponseBody
-	public ArrayList<PostDTO> Home(ModelMap map, HttpSession session) {
+	public ArrayList<PostEntity> Home(ModelMap map, HttpSession session) {
 		
-		ArrayList<PostDTO> listposts =  postService.showListPost();
+		ArrayList<PostEntity> listposts =  postService.showListPost();
 		
 		return listposts ;
 	}
