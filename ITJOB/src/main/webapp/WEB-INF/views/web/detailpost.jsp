@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="unit-5 overlay"
-		style="background-image: url('template/web/images/hero_bg_3.jpg');">
+		style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF-mbvyNXxnDReOJPsqC9AWIccBvMwCiBfoAc0RU0SzuoYKF5N&s');">
 		<div class="container text-center">
 			<h2 class="mb-0">Chi tiết bài đăng</h2>
 			<p class="mb-0 unit-6">
@@ -117,8 +117,7 @@
 						<div class="row form-group">
 							<div class="col-md-12">
 							<c:if test="${not empty company}">
-								<input type="button" id="list_candidate" value="Danh sách các ứng viên"
-									class="btn btn-primary  py-2 px-5">
+								<a href='<c:url value="/chi-tiet-bai-dang/${post.getId()}/danh-sach-ung-tuyen"/>' class="btn btn-primary py-2">Danh sách các ứng viên</a>
 							</c:if>
 							<c:if test="${empty company}">
 								<input type="button" id="ung_tuyen" value="Ứng Tuyển"
@@ -202,12 +201,17 @@
 			success : function(response){
 				if(response == "OK"){
 					alert("ung tuyen thanh cong");
+				}else if(response == "null"){
+					alert("Bạn chưa đăng nhập");
+					window.location.replace("/ITJOB/dang-nhap")
 				}else{
 					alert("ung tuyen khong thanh cong");
 				}
 			}
  		});
  	});
+ 	
+	
  	
  </script>
 

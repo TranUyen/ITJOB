@@ -12,7 +12,7 @@ public interface PostService {
 	
 	public boolean addPost(PostDTO postDTO);
 	
-	public ArrayList<PostDTO> showListPost();
+	public ArrayList<PostEntity> showListPost();
 
 	public PostDTO detailPost(int id);
 	

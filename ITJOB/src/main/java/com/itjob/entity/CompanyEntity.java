@@ -1,6 +1,5 @@
 package com.itjob.entity;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "companies")
@@ -26,6 +27,7 @@ public class CompanyEntity {
 	private String password;
 	
 	@OneToMany(mappedBy = "companyEntity",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
+	@JsonIgnore
 	private Set<PostEntity> listpost = new HashSet<PostEntity>();
 	
 	public CompanyEntity(int id, String name, String address, String phone, String email, String password) {

@@ -11,9 +11,9 @@
 	<div class="unit-5 overlay"
 		style="background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-blue-tech-theme-globe-poster-background-image_153891.jpg');">
 		<div class="container text-center">
-			<h2 class="mb-0">Các bài viết đã đăng</h2>
+			<h2 class="mb-0">Các ứng viên ứng tuyển</h2>
 			<p class="mb-0 unit-6">
-				<a href="index.html">Trang chủ</a> <span class="sep">></span> <span>Các bài viết</span>
+				<a href="index.html">Trang chủ</a> <span class="sep">></span> <span>Các ứng viên</span>
 			</p>
 		</div>
 	</div>
@@ -28,7 +28,8 @@
 					
 
 						<h3 class="font-weight-bold" >Danh sách ứng viên</h3>
-					<c:forEach items="${listCandidate}" var="candidate">
+					<c:forEach items="${listCandidate}"  var="candidate">
+					<c:forEach items="${list }" var= "x">
 						<div class="row">
 					         <div class="col-md-12">
 					           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
@@ -43,18 +44,20 @@
 					               <div class="job-post-item-body d-block d-md-flex">
 					                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span>${candidate.getProfile().getTechnology_skill() }</div>
 					                 <div class="mr-3"><span class="fl-bigmug-line-big104"></span> ${candidate.getEmail() }  <span></span></div>
-					                 <div><span class="fl-bigmug-line-alarm31"></span> ${post.getTime()}<span></span></div>
+					                 
+					                 <div><span class="fl-bigmug-line-alarm31"></span> ${x.getTime()}<span></span></div>
 					               </div>
 					              </div>
 					
 					              <div class="ml-auto">
 					                
-					                <a href='<c:url value="/chi-tiet-bai-dang/${post.getId() }"/>' class="btn btn-primary py-2">Chi tiết</a>
+					                <a href='<c:url value="/chi-tiet-bai-dang/${x.getTime() }"/>' class="btn btn-primary py-2">Chi tiết</a>
 					              </div>
 					
 					           </div>
 					         </div>
 					        </div>
+					        </c:forEach>
 					       </c:forEach>
 	  				</div>
 
@@ -72,31 +75,25 @@
 						<div class="row form-group " style="margin-bottom: 0;">
 							<div class="col-md-12 mb-3 mb-md-0">
 								<p>
-									<strong>Tên công ty:${company.getName() }</strong> <span> </span>
+									<strong>Chức vụ:${post.getPosition() }</strong> <span> </span>
 								</p>
 							</div>
 						</div>
 						<div class="row form-group " style="margin-bottom: 0;">
 							<div class="col-md-12 mb-3 mb-md-0">
 								<p>
-									<strong>Địa chỉ:${company.getAddress() }</strong> <span> </span>
+									<strong>Số lượng:${post.getNo_member() }</strong> <span> </span>
 								</p>
 							</div>
 						</div>
 						<div class="row form-group " style="margin-bottom: 0;">
 							<div class="col-md-12 mb-3 mb-md-0">
 								<p>
-									<strong>Email:${company.getEmail() }</strong> <span> </span>
+									<strong>Lương:${post.getSalary() }</strong> <span> </span>
 								</p>
 							</div>
 						</div>
-						<div class="row form-group " style="margin-bottom: 0;">
-							<div class="col-md-12 mb-3 mb-md-0">
-								<p>
-									<strong>Hot line:</strong> <span> </span>
-								</p>
-							</div>
-						</div>
+						
 						
 
 					</div>

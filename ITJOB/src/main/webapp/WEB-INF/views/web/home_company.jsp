@@ -73,14 +73,14 @@
                </div>
                <div class="job-post-item-body d-block d-md-flex">
                  <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{x.profile.technology_skill}}</a></div>
-                 <div><span class="fl-bigmug-line-big104"></span> <span>${x.email}</span></div>
+                 <div><span class="fl-bigmug-line-big104"></span> <span>{{x.email}}</span></div>
                </div>
               </div>
 
               <div class="ml-auto">
                 <a href="#" class="btn btn-secondary rounded-circle btn-favorite text-gray-500"><span class="icon-heart"></span></a>
                 <a href='<c:url value="/chi-tiet-ung-vien
-                /{{x.id}}"/>' class="btn btn-primary py-2">Ứng tuyển</a>
+                /{{x.id}}"/>' class="btn btn-primary py-2">Chi tiết</a>
               </div>
 
            </div>

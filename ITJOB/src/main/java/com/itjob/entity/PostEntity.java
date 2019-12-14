@@ -17,6 +17,8 @@ import javax.print.attribute.HashAttributeSet;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "posts")
 public class PostEntity {
@@ -43,9 +45,11 @@ public class PostEntity {
 
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_contact")
+	@JsonIgnore
 	private ContactEntity contactEntity;
 
 	@OneToMany(mappedBy = "postEntity",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
+	@JsonIgnore
 	private Set<Post_ProfileEntity> list = new HashSet<Post_ProfileEntity>();
 
 	public Set<Post_ProfileEntity> getList() {

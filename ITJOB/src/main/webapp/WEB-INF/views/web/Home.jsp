@@ -86,7 +86,7 @@
                  </div>
                </div>
                <div class="job-post-item-body d-block d-md-flex">
-                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{x.companyDTO.email}}</a></div>
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{x.companyEntity.name}}</a></div>
                  <div><span class="fl-bigmug-line-big104"></span> <span>{{x.province}}</span></div>
                </div>
               </div>

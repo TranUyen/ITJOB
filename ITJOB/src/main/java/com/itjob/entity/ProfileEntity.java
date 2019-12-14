@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
@@ -28,6 +30,7 @@ public class ProfileEntity {
 	private String other_skill;
 	
 	@OneToMany(mappedBy = "profile",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
+	@JsonIgnore
 	private Set<CandidateEntity> listCandidateEntities = new HashSet<CandidateEntity>();
 	
 	public Set<CandidateEntity> getListCandidateEntities() {
