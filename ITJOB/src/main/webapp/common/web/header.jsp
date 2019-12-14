@@ -43,7 +43,7 @@
 								<li class="has-children"><a href=""><span>${candidate.getName() }
 									</span> </a>
 									<ul class="dropdown">
-										<li><a href="<c:url value="/dang-ky-cong-ty"/>">Hồ Sơ</a></li>
+										<li><a href="<c:url value="/cac-bai-ung-tuyen"/>">Bài viết đã ứng tuyển</a></li>
 										<li><a href="<c:url value="/dang-ky-ung-vien"/>">Đổi
 												mật khẩu</a></li>
 										<li><a href="<c:url value="/dang-xuat"/>">Đăng
