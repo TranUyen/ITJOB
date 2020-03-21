@@ -7,7 +7,7 @@
     <packaging>war</packaging>
 
     <properties>
-		<springframework.version>4.3.13.RELEASE</springframework.version>
+		<springframework.version>5.2.2.RELEASE</springframework.version>
 		<springsecurity.version>3.2.8.RELEASE</springsecurity.version>
 		<jsp.api.version>2.3.1</jsp.api.version>
 		<mysql.version>8.0.13</mysql.version>
